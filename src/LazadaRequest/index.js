@@ -91,7 +91,6 @@ const post = (
   // turns out even it's HTTP POST, Lazada expect `body` to be part of query string
   const qs = Object.assign(
     {},
-    body,
     getSystemQueryParamObject(appKey, appSecret, apiPath, accessToken, body),
   )
   return rp({
